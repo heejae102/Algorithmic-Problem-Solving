@@ -37,15 +37,51 @@ int main()
 {
 	// 최초의 풀이 
 
+	/*
 	// 괄호 문자열을 입력받음. 문자열의 최대 길이는 30.
-	char input[30] = { 0 };
+	char input[31] = { 0 };
+	int leftP = 0, rightP = 0;
 
 	cin >> input;
 
+	for (int i = 0; i < strlen(input); i++)
+	{
+		if (input[i] == '(') leftP++;
+		else
+		{
+			(leftP > 0) ? leftP-- : rightP++;
+		}
+	}
 
 	// 올바른 괄호일 경우 YES, 아닐 경우 NO 출력 
-	printf("YES\n");
-	printf("NO\n");
+	(leftP == 0) && (rightP == 0) ? printf("YES\n") : printf("NO\n");
+	*/
+
+	//============================================================================// 
+
+	// 강의 풀이
+
+	char input[31] = { 0 };
+	int matchP = 0;
+
+	cin >> input;
+
+	for (int i = 0; i < strlen(input); i++)
+	{
+		if (input[i] == '(') matchP++;
+		else
+		{
+			matchP--;
+
+			// matchP가 음수가 될 경우 
+			// ())( 
+			// 위와 같이 올바른 괄호 형태가 아니므로 break; 
+
+			if (matchP < 0) break;
+		}
+	}
+
+	(matchP == 0) ? printf("YES\n") : printf("NO\n");
 
 	return 0;
 }

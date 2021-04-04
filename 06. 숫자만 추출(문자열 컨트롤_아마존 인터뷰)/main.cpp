@@ -71,8 +71,8 @@ int main()
 
 	/*
 	// 길이 50이하의 문자열 입력 
-	char input[50] = { 0 };
-	char digit[50] = { 0 };
+	char input[51] = { 0 };
+	char digit[51] = { 0 };
 
 	int num = 0, count = 0;
 
@@ -109,7 +109,7 @@ int main()
 
 	// 강의 풀이 
 
-	char input[50] = { 0 };
+	char input[51] = { 0 };
 	int num = 0, count = 0;
 
 	cin >> input;

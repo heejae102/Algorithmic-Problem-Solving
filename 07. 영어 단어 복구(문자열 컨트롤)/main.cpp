@@ -39,7 +39,7 @@ int main()
 	// 최초의 풀이 
 
 	/*
-	char input[100] = { 0 };
+	char input[101] = { 0 };
 
 	// 길이 100 이하의 문자열 입력(영어알파벳 + 공백문자)
 	cin.getline(input, 100);
@@ -61,7 +61,7 @@ int main()
 
 	// 강의 풀이 
 
-	char input[100], res[100];
+	char input[101], res[101];
 
 	int p = 0;
 
