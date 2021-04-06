@@ -64,6 +64,8 @@ int reverse(int x)
 // 소수인지 확인하는 함수 
 bool isPrime(int x)
 {
+	if(x == 1) return false; 
+
 	for (int i = 2; i < x; i++)
 	{
 		if (x % i == 0) return false;
@@ -73,16 +75,36 @@ bool isPrime(int x)
 }
 */
 
+//============================================================================// 
+
+// 강의 풀이 
+
 // 뒤집는 함수 
 int reverse(int x)
 {
+	int res = 0;
 
+	while (x > 0)
+	{
+		res = (res * 10) + (x % 10);
+		x /= 10;
+	}
+
+	return res;
 }
 
 // 소수인지 확인하는 함수 
 bool isPrime(int x)
 {
+	if (x == 1) return false; 
 
+	// 1과 자기자신을 제외한 약수가 존재하는지 확인 
+	for (int i = 2; i < x; i++)
+	{
+		if (x % i == 0) return false; 
+	}
+
+	return true; 
 }
 
 int main()
@@ -100,13 +122,8 @@ int main()
 		res = reverse(num);
 
 		// 소수는 1을 포함하지 않으므로 1은 제외할 것. 
-		if (res != 1 && isPrime(res)) printf("%d ", res);
+		if (isPrime(res)) printf("%d ", res);
 	}
-
-	//============================================================================// 
-
-
-
 
 	return 0;
 }
