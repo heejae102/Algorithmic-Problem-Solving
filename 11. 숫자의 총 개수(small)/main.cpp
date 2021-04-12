@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 4분 
+
 /*
 
 <11. 숫자의 총 개수(small)>

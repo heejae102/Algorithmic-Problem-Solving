@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 5분 (최적화 필요)
+
 /*
 
 <02. 자연수의 합>

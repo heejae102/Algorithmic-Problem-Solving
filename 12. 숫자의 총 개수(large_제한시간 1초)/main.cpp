@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 17분 (최초의 풀이보다 성능이 좋은 새로운 풀이법 발견)
+
 /*
 
 <12. 숫자의 총 개수(large : 제한시간 1초)>
@@ -36,7 +38,7 @@ using namespace std;
 
 int main()
 {
-	// 최초의 풀이 
+	// 최초의 풀이1 (가장 느림)
 
 	/*
 	int n, count, sum = 0;
@@ -64,10 +66,30 @@ int main()
 	printf("%d\n", sum);
 	*/
 
+	// 새로운 풀이2 (1번보다 빠르고, 강의 풀이보다는 조금 느리다.)
+
+	int n, sum = 0, digitCount = 1;
+
+	cin >> n; 
+
+	for (int i = 1, k = 10; i <= n; i++)
+	{
+		if (i >= k)
+		{
+			k *= 10;
+			digitCount++;
+		}
+
+		sum += digitCount;
+	}
+
+	cout << sum << endl; 
+
 	//============================================================================// 
 
-	// 강의 풀이 (이 쪽이 더 빠르다.)
+	// 강의 풀이 (가장 빠름. 하지만 가독성이 너무 떨어져서 디버깅이 어려움.)
 
+	/*
 	// c : 자릿수 
 	// d : 숫자 개수 
 	int n, sum = 0, res = 0, c = 1, d = 9;
@@ -85,6 +107,7 @@ int main()
 
 	res += (n - sum) * c;
 	printf("%d\n", res);
+	*/
 
 	return 0;
 }

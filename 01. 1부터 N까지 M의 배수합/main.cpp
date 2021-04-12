@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// 1차 복습 풀이시간 : 2분 내 
+
 /*
 
 <01. 1부터 N까지 M의 배수합>

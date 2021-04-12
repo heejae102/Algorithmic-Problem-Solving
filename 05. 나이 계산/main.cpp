@@ -2,6 +2,8 @@
 #include<fstream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 10분 (최적화 및 복습 필요 : char형 변수를 정수로 착각하여 비교, 대입하지 말아야 함)
+
 /*
 
 <05. 나이 계산>

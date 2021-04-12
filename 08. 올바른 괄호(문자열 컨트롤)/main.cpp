@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 8분 (최적화 필요)
+
 /*
 
 <08. 올바른 괄호(문자열 컨트롤)>

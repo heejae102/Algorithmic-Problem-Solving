@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 5분 
+
 /*
 
 <17. 선생님 퀴즈>

@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 14분 (복습 필요 / 소수를 구할 때 1을 제외하는 예외 처리 누락)
+
 /*
 
 <14. 뒤집은 소수>

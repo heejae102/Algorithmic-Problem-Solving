@@ -3,6 +3,8 @@
 #include<limits>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 6분 
+
 /*
 
 <13. 가장 많이 사용된 자릿수>

@@ -3,6 +3,8 @@
 #include<algorithm>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 13분 
+
 /*
 
 <16. Anagram (구글 인터뷰)>
@@ -47,7 +49,6 @@ int main()
 	// 두 번째 줄에 두 번째 단어가 입력됩니다.
 	// 단어의 길이는 100을 넘지 않습니다.
 
-	bool res = true; 
 	char a[101]{ 0 }, b[101]{ 0 };
 	char alpha1[123]{ 0 }, alpha2[123]{ 0 };
 
@@ -63,12 +64,12 @@ int main()
 	{
 		if (alpha1[i] != alpha2[i])
 		{
-			res = false;
-			break;
+			printf("NO\n");
+			return 0; 
 		}
 	}
 
-	(res == true) ? printf("YES\n") : printf("NO\n");
+	printf("YES\n");
 
 	// 두 단어가 아나그램이면 "YES"를 출력하고, 아니면 "NO"를 출력합니다.
 	*/

@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 9분 (강의 풀이는 복습 필요)
+
 /*
 
 <15. 소수의 개수(제한시간 1초)>

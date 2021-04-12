@@ -2,6 +2,10 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 6분 
+// (복습 필요 / cout으로 문자 + 정수형 출력 시 정수형 아스키코드 값으로 출력되므로 char로 캐스팅 필요)
+// (tolwer, toupper, isdigit, isalpha 등의 함수는 int형 리턴값을 반환하므로 char 형으로 캐스팅 필요)
+
 /*
 
 <07. 영어 단어 복구(문자열 컨트롤)>
@@ -56,6 +60,17 @@ int main()
 		}
 	}
 	*/
+
+	// 개선된 풀이 
+
+	char ch[101]{ 0 };
+
+	cin.getline(ch, 100);
+
+	for (int i = 0; i < strlen(ch); i++)
+	{
+		if (ch[i] != ' ') cout << (char)tolower(ch[i]);
+	}
 
 	//============================================================================// 
 

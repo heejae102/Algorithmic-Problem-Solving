@@ -2,6 +2,8 @@
 #include<limits>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 5분
+
 /*
 
 <04. 나이 차이>

@@ -3,6 +3,8 @@
 #include<cctype>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 6분 
+
 /*
 
 <06. 숫자만 추출(문자열 컨트롤 : 아마존 인터뷰)>

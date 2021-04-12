@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 5분 
+
 /*
 
 <03. 진약수의 합>
@@ -44,7 +46,7 @@ int main()
 
 	for (int i = 2; i < n; i++)
 	{
-		if (20 % i == 0)
+		if (n % i == 0)
 		{
 			cout << " + " << i;
 
