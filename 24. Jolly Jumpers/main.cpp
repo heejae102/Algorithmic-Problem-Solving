@@ -4,6 +4,10 @@
 #include<cmath>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 15분 
+// (복습필요 / 배열의 인덱스 값 계산 시 예외처리 필요)
+// (입력받으면서 바로 연산할 수 있도록 구현할 것)
+
 /*
 
 <24. Jolly Jumpers>

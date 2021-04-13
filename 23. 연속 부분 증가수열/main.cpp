@@ -3,6 +3,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 12분 
+
 /*
 
 <23. 연속 부분 증가수열>

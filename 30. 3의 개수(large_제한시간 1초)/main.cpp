@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 15분 (복습 필요 / 강의 풀이 응용 새로운 풀이법 추가)
+
 /*
 
 <30. 3의 개수는?(large : 제한시간 1초)>
@@ -55,11 +57,46 @@ int main()
 
 	//============================================================================//
 
+	// 새로운 풀이 (강의 풀이 응용)
+
+	// lDigit은 조건 확인에 사용되므로 반드시 초기화할 것.  
+
+	int n, lDigit = 1, rDigit, curDigit, count = 0;
+
+	cin >> n; 
+
+	// 1234
+
+	for (int i = 1; lDigit != 0; i *= 10)
+	{
+		lDigit = n / (i * 10);
+		curDigit = (n / i) % 10;
+		rDigit = n % i;
+
+		if (curDigit > 3)
+		{
+			count += (lDigit + 1) * i;
+		}
+		else if (curDigit < 3)
+		{
+			count += lDigit * i;
+		}
+		else if (curDigit == 3)
+		{
+			count += (lDigit * i) + (rDigit + 1);
+		}
+	}
+
+	cout << count << endl; 
+
+	//============================================================================//
+
 	// 강의 풀이 
 
 	// 1의자리부터 돌아가면서 해당 수가 
 	// 3과 같은가, 작은가, 큰가에 대한 분기를 나눠 개수 계산 
 
+	/*
 	int n, lt = 1, cur, rt, i = 1, count = 0;
 
 	cin >> n; 
@@ -89,6 +126,7 @@ int main()
 	}
 
 	cout << count << endl; 
+	*/
 
 	return 0;
 }

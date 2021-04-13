@@ -4,6 +4,8 @@
 #include<vector>
 using namespace std;
  
+// 1차 복습 풀이시간 : 8분 
+
 /*
 
 <22. 온도의 최댓값(1차원 배열 : 제한시간 1초)>
@@ -124,6 +126,7 @@ int main()
 
 	// 강의 풀이 2
 
+	/*
 	int n, k, sum = 0, max = 0;
 
 	cin >> n >> k;
@@ -153,6 +156,35 @@ int main()
 	}
 
 	printf("%d\n", max);
+	*/
+
+	//============================================================================//
+
+	// 강의 풀이3 (약간의 최적화)
+
+	int n, k, sum = 0, max = numeric_limits<int>::min();
+
+	cin >> n >> k;
+
+	vector<int> heat(n);
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> heat[i];
+
+		if (i < k) sum += heat[i];
+	}
+
+	max = sum;
+
+	for (int i = k; i < n; i++)
+	{
+		sum += (heat[i] - heat[i - k]);
+
+		if (sum > max) max = sum;
+	}
+
+	cout << max << endl;
 
 	return 0;
 }

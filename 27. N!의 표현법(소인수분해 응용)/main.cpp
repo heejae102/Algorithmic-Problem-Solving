@@ -3,6 +3,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 15분 (복습 필요 / 암기하기)
+
 /*
 
 <27. N!의 표현법(소인수분해 응용)>

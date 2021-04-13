@@ -3,6 +3,8 @@
 #include<ctime>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 11분 (복습필요 / 결과 출력 예외처리 필요)
+
 /*
 
 <21. 카드 게임>

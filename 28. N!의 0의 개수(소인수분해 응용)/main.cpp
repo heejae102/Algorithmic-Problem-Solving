@@ -3,6 +3,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 7분 
+
 /*
 
 <28. N!의 0의 개수(소인수분해 응용)>

@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std;
 
+// 1차 복습 풀이시간 : 7분 
+
 /*
 
 <29. 3의 개수는?(small : 구글 인터뷰)>
