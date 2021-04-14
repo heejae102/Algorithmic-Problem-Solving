@@ -69,6 +69,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "30. 3의 개수(large_제�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "31. 탄화수소 질량", "31. 탄화수소 질량\31. 탄화수소 질량.vcxproj", "{94ADF9CA-90DD-46C8-93D0-F82073B50B72}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "32. 선택정렬", "32. 선택정렬\32. 선택정렬.vcxproj", "{FCD5A964-76F8-4208-B132-18A1DB2D838C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "33. 3등의 성적(정렬 응용)", "33. 3등의 성적(정렬 응용)\33. 3등의 성적(정렬 응용).vcxproj", "{52F55B7F-1D33-4981-B02E-70A69EDDC5D6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "34. 버블정렬", "34. 버블정렬\34. 버블정렬.vcxproj", "{50DF7112-D3E9-4E44-BFF9-BCC102F6EF50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "정렬", "정렬", "{1AD18D49-D05A-4F5D-A9DD-9719641B1CC2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "35. Special Sort(버블정렬 응용_구글 인터뷰)", "35. Special Sort(버블정렬 응용_구글 인터뷰)\35. Special Sort(버블정렬 응용_구글 인터뷰).vcxproj", "{E0BC2B09-EA70-423F-97ED-A0FBD1FEAF08}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -333,6 +343,38 @@ Global
 		{94ADF9CA-90DD-46C8-93D0-F82073B50B72}.Release|x64.Build.0 = Release|x64
 		{94ADF9CA-90DD-46C8-93D0-F82073B50B72}.Release|x86.ActiveCfg = Release|Win32
 		{94ADF9CA-90DD-46C8-93D0-F82073B50B72}.Release|x86.Build.0 = Release|Win32
+		{FCD5A964-76F8-4208-B132-18A1DB2D838C}.Debug|x64.ActiveCfg = Debug|x64
+		{FCD5A964-76F8-4208-B132-18A1DB2D838C}.Debug|x64.Build.0 = Debug|x64
+		{FCD5A964-76F8-4208-B132-18A1DB2D838C}.Debug|x86.ActiveCfg = Debug|Win32
+		{FCD5A964-76F8-4208-B132-18A1DB2D838C}.Debug|x86.Build.0 = Debug|Win32
+		{FCD5A964-76F8-4208-B132-18A1DB2D838C}.Release|x64.ActiveCfg = Release|x64
+		{FCD5A964-76F8-4208-B132-18A1DB2D838C}.Release|x64.Build.0 = Release|x64
+		{FCD5A964-76F8-4208-B132-18A1DB2D838C}.Release|x86.ActiveCfg = Release|Win32
+		{FCD5A964-76F8-4208-B132-18A1DB2D838C}.Release|x86.Build.0 = Release|Win32
+		{52F55B7F-1D33-4981-B02E-70A69EDDC5D6}.Debug|x64.ActiveCfg = Debug|x64
+		{52F55B7F-1D33-4981-B02E-70A69EDDC5D6}.Debug|x64.Build.0 = Debug|x64
+		{52F55B7F-1D33-4981-B02E-70A69EDDC5D6}.Debug|x86.ActiveCfg = Debug|Win32
+		{52F55B7F-1D33-4981-B02E-70A69EDDC5D6}.Debug|x86.Build.0 = Debug|Win32
+		{52F55B7F-1D33-4981-B02E-70A69EDDC5D6}.Release|x64.ActiveCfg = Release|x64
+		{52F55B7F-1D33-4981-B02E-70A69EDDC5D6}.Release|x64.Build.0 = Release|x64
+		{52F55B7F-1D33-4981-B02E-70A69EDDC5D6}.Release|x86.ActiveCfg = Release|Win32
+		{52F55B7F-1D33-4981-B02E-70A69EDDC5D6}.Release|x86.Build.0 = Release|Win32
+		{50DF7112-D3E9-4E44-BFF9-BCC102F6EF50}.Debug|x64.ActiveCfg = Debug|x64
+		{50DF7112-D3E9-4E44-BFF9-BCC102F6EF50}.Debug|x64.Build.0 = Debug|x64
+		{50DF7112-D3E9-4E44-BFF9-BCC102F6EF50}.Debug|x86.ActiveCfg = Debug|Win32
+		{50DF7112-D3E9-4E44-BFF9-BCC102F6EF50}.Debug|x86.Build.0 = Debug|Win32
+		{50DF7112-D3E9-4E44-BFF9-BCC102F6EF50}.Release|x64.ActiveCfg = Release|x64
+		{50DF7112-D3E9-4E44-BFF9-BCC102F6EF50}.Release|x64.Build.0 = Release|x64
+		{50DF7112-D3E9-4E44-BFF9-BCC102F6EF50}.Release|x86.ActiveCfg = Release|Win32
+		{50DF7112-D3E9-4E44-BFF9-BCC102F6EF50}.Release|x86.Build.0 = Release|Win32
+		{E0BC2B09-EA70-423F-97ED-A0FBD1FEAF08}.Debug|x64.ActiveCfg = Debug|x64
+		{E0BC2B09-EA70-423F-97ED-A0FBD1FEAF08}.Debug|x64.Build.0 = Debug|x64
+		{E0BC2B09-EA70-423F-97ED-A0FBD1FEAF08}.Debug|x86.ActiveCfg = Debug|Win32
+		{E0BC2B09-EA70-423F-97ED-A0FBD1FEAF08}.Debug|x86.Build.0 = Debug|Win32
+		{E0BC2B09-EA70-423F-97ED-A0FBD1FEAF08}.Release|x64.ActiveCfg = Release|x64
+		{E0BC2B09-EA70-423F-97ED-A0FBD1FEAF08}.Release|x64.Build.0 = Release|x64
+		{E0BC2B09-EA70-423F-97ED-A0FBD1FEAF08}.Release|x86.ActiveCfg = Release|Win32
+		{E0BC2B09-EA70-423F-97ED-A0FBD1FEAF08}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -369,6 +411,10 @@ Global
 		{673A4D29-15E2-4BAB-BD84-6D676380EBE0} = {2A9EF046-8F54-4565-A09B-22C8C8F48636}
 		{917B60D9-43F8-4393-A4FC-6E7A84483105} = {2A9EF046-8F54-4565-A09B-22C8C8F48636}
 		{94ADF9CA-90DD-46C8-93D0-F82073B50B72} = {2A9EF046-8F54-4565-A09B-22C8C8F48636}
+		{FCD5A964-76F8-4208-B132-18A1DB2D838C} = {1AD18D49-D05A-4F5D-A9DD-9719641B1CC2}
+		{52F55B7F-1D33-4981-B02E-70A69EDDC5D6} = {1AD18D49-D05A-4F5D-A9DD-9719641B1CC2}
+		{50DF7112-D3E9-4E44-BFF9-BCC102F6EF50} = {1AD18D49-D05A-4F5D-A9DD-9719641B1CC2}
+		{E0BC2B09-EA70-423F-97ED-A0FBD1FEAF08} = {1AD18D49-D05A-4F5D-A9DD-9719641B1CC2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7B1B076-15A2-492E-B1F3-E083958BDED4}
