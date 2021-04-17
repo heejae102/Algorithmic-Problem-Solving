@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<iostream>
+#include<vector>
 using namespace std; 
 
 /*
@@ -20,12 +21,7 @@ using namespace std;
 그리고 다음 왕자부터 다시 1부터 시작하여 번호를 외친다.
 이렇게 해서 마지막까지 남은 왕자가 공주를 구하러 갈 수 있다.
 
-1
-8 2
-7 3
-6
-5
-4
+(환형으로 시계방향으로 돌아야 한다.)
 
 예를 들어 총 8명의 왕자가 있고, 3을 외친 왕자가 제외된다고 하자. 
 처음에는 3번 왕자가 3을 외쳐 제외된다. 
@@ -54,13 +50,93 @@ N과 K가 주어질 때 공주를 구하러 갈 왕자의 번호를 출력하는 프로그램을 작성하시오.
 
 int main()
 {
-	// 최초의 풀이 
+	// 최초의 풀이 (강의 풀이와 원리는 비슷하나 시간복잡도가 좋지 않다.)
 
-	int n, k, res; 
+	/*
+	int n, k, pos, temp, count = 0;
 
 	cin >> n >> k;
 
-	cout << res << endl; 
+	vector<int> prince(n);
+
+	for (int i = 0; i < n; i++)
+	{
+		prince[i] = i + 1;
+	}
+
+	// 전체 왕자수 - 1 만큼 왕자를 제외시키기 
+	// 지운 왕자의 원소 값은 0으로 변경(벡터로 원소를 삭제하면 index가 계속 밀림.)
+	// 지원 왕자는 건너뛰고, 마지막 원소를 넘어가면 첫번째 원소로 이동시켜서 
+	// 원형처럼 돌아가면서 검사하도록 구현.  
+
+	pos = k - 1;
+
+	while (count < n - 1)
+	{
+		prince[pos] = 0;
+		count++;
+
+		for (int i = 0; i < k; i++)
+		{
+			while (1)
+			{
+				pos++;
+
+				if (pos >= prince.size()) pos = 0;
+
+				if (prince[pos] != 0) break;
+			}
+		}
+	}
+
+	// 첫 줄에 마지막 남은 왕자의 번호를 출력합니다.
+
+	for (int i = 0; i < n; i++)
+	{
+		if (prince[i] == 0) continue;
+
+		cout << prince[i] << endl;
+		break;
+	}
+	*/
+
+	//============================================================================//
+
+	// 강의 풀이 (시간 복잡도가 월등히 우수)
+
+	int n, k, pos = 0, bp = 0, count = 0;
+
+	cin >> n >> k;
+
+	vector<int> prince(n + 1, 0);
+
+	while (bp < n - 1)
+	{
+		pos++;
+
+		if (pos > n) pos = 1; 
+
+		if (prince[pos] == 0)
+		{
+			count++;
+
+			if (count == k)
+			{
+				prince[pos] = 1;
+				count = 0;
+				bp++;
+			}
+		}
+	}
+
+	for (int i = 1; i <= n; i++)
+	{
+		if (prince[i] == 0)
+		{
+			cout << i << endl;
+			break;
+		}
+	}
 
 	return 0;
 }
