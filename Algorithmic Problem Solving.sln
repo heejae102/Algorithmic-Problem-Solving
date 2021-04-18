@@ -113,6 +113,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "50. 영지 선택(small_2�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "51. 영지 선택(large_제한시간 1초)", "51. 영지 선택(large_제한시간 1초)\51. 영지 선택(large_제한시간 1초).vcxproj", "{55BBCB72-8539-4D46-852D-15AB1F502400}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "52. Ugly Numbers(투포인터 알고리즘 응용)", "52. Ugly Numbers(투포인터 알고리즘 응용)\52. Ugly Numbers(투포인터 알고리즘 응용).vcxproj", "{39F047C1-7BB7-4F11-995E-611753B8000B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "스택 자료구조", "스택 자료구조", "{D91D6F8D-DDCB-4031-BCCF-CD4BA463E94B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "53. K진수 출력(스택 자료구조 구현)", "53. K진수 출력(스택 자료구조 구현)\53. K진수 출력(스택 자료구조 구현).vcxproj", "{A5B91077-1245-4162-B4C3-D7BEC04408AA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "54. 올바른 괄호(STL 스택 자료구조 활용)", "54. 올바른 괄호(STL 스택 자료구조 활용)\54. 올바른 괄호(STL 스택 자료구조 활용).vcxproj", "{D39DA2D0-1286-4338-B6C5-93AAF739C886}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -537,6 +545,30 @@ Global
 		{55BBCB72-8539-4D46-852D-15AB1F502400}.Release|x64.Build.0 = Release|x64
 		{55BBCB72-8539-4D46-852D-15AB1F502400}.Release|x86.ActiveCfg = Release|Win32
 		{55BBCB72-8539-4D46-852D-15AB1F502400}.Release|x86.Build.0 = Release|Win32
+		{39F047C1-7BB7-4F11-995E-611753B8000B}.Debug|x64.ActiveCfg = Debug|x64
+		{39F047C1-7BB7-4F11-995E-611753B8000B}.Debug|x64.Build.0 = Debug|x64
+		{39F047C1-7BB7-4F11-995E-611753B8000B}.Debug|x86.ActiveCfg = Debug|Win32
+		{39F047C1-7BB7-4F11-995E-611753B8000B}.Debug|x86.Build.0 = Debug|Win32
+		{39F047C1-7BB7-4F11-995E-611753B8000B}.Release|x64.ActiveCfg = Release|x64
+		{39F047C1-7BB7-4F11-995E-611753B8000B}.Release|x64.Build.0 = Release|x64
+		{39F047C1-7BB7-4F11-995E-611753B8000B}.Release|x86.ActiveCfg = Release|Win32
+		{39F047C1-7BB7-4F11-995E-611753B8000B}.Release|x86.Build.0 = Release|Win32
+		{A5B91077-1245-4162-B4C3-D7BEC04408AA}.Debug|x64.ActiveCfg = Debug|x64
+		{A5B91077-1245-4162-B4C3-D7BEC04408AA}.Debug|x64.Build.0 = Debug|x64
+		{A5B91077-1245-4162-B4C3-D7BEC04408AA}.Debug|x86.ActiveCfg = Debug|Win32
+		{A5B91077-1245-4162-B4C3-D7BEC04408AA}.Debug|x86.Build.0 = Debug|Win32
+		{A5B91077-1245-4162-B4C3-D7BEC04408AA}.Release|x64.ActiveCfg = Release|x64
+		{A5B91077-1245-4162-B4C3-D7BEC04408AA}.Release|x64.Build.0 = Release|x64
+		{A5B91077-1245-4162-B4C3-D7BEC04408AA}.Release|x86.ActiveCfg = Release|Win32
+		{A5B91077-1245-4162-B4C3-D7BEC04408AA}.Release|x86.Build.0 = Release|Win32
+		{D39DA2D0-1286-4338-B6C5-93AAF739C886}.Debug|x64.ActiveCfg = Debug|x64
+		{D39DA2D0-1286-4338-B6C5-93AAF739C886}.Debug|x64.Build.0 = Debug|x64
+		{D39DA2D0-1286-4338-B6C5-93AAF739C886}.Debug|x86.ActiveCfg = Debug|Win32
+		{D39DA2D0-1286-4338-B6C5-93AAF739C886}.Debug|x86.Build.0 = Debug|Win32
+		{D39DA2D0-1286-4338-B6C5-93AAF739C886}.Release|x64.ActiveCfg = Release|x64
+		{D39DA2D0-1286-4338-B6C5-93AAF739C886}.Release|x64.Build.0 = Release|x64
+		{D39DA2D0-1286-4338-B6C5-93AAF739C886}.Release|x86.ActiveCfg = Release|Win32
+		{D39DA2D0-1286-4338-B6C5-93AAF739C886}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -593,6 +625,9 @@ Global
 		{052FDB22-3CC3-4DC8-9248-BAC01CE7E5B8} = {E4AC830C-5AF2-431E-BB3B-E87DDC545EF7}
 		{5660AF77-09C1-4054-899D-45F6A2903092} = {E4AC830C-5AF2-431E-BB3B-E87DDC545EF7}
 		{55BBCB72-8539-4D46-852D-15AB1F502400} = {E4AC830C-5AF2-431E-BB3B-E87DDC545EF7}
+		{39F047C1-7BB7-4F11-995E-611753B8000B} = {E4AC830C-5AF2-431E-BB3B-E87DDC545EF7}
+		{A5B91077-1245-4162-B4C3-D7BEC04408AA} = {D91D6F8D-DDCB-4031-BCCF-CD4BA463E94B}
+		{D39DA2D0-1286-4338-B6C5-93AAF739C886} = {D91D6F8D-DDCB-4031-BCCF-CD4BA463E94B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7B1B076-15A2-492E-B1F3-E083958BDED4}
