@@ -82,11 +82,45 @@ int main()
 
 	printf("YES\n");
 	*/
+	
+	//============================================================================//
+
+	// 개선된 풀이 (중복된 수가 입력되는 케이스에 대해서도 정답 출력)
+
+	int n, preNum, curNum, temp;
+
+	cin >> n; 
+
+	vector<int> num(n, 0);
+
+	cin >> preNum;
+
+	for (int i = 1; i < n; i++)
+	{
+		cin >> curNum;
+
+		temp = abs(curNum - preNum);
+
+		// temp는 절대값이므로 음수일 수는 없고, 0이거나 n보다 큰 경우 100% 오답
+		// 중복된 수열차가 존재해도 100% 오답 
+
+		if (temp == 0 || temp >= n || num[temp] != 0)
+		{
+			cout << "NO" << endl; 
+			return 0;
+		}
+
+		num[temp] = 1; 
+		preNum = curNum;
+	}
+
+	cout << "YES" << endl; 
 
 	//============================================================================//
 
-	// 강의 풀이 (시간 복잡도가 더 우수)
+	// 강의 풀이 (시간 복잡도가 더 우수, 중복된 수가 입력될 경우 오답 가능성)
 
+	/*
 	int n, preNum, curNum, temp;
 
 	cin >> n;
@@ -115,6 +149,7 @@ int main()
 
 	// NO가 출력되어 프로그램이 종료되지 않았다면, 조건이 충족되었다는 의미로 YES 출력 
 	printf("YES\n");
+	*/
 
 	return 0;
 }

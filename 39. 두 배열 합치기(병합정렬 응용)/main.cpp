@@ -3,6 +3,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 20분 (복습 필요)
+
 /*
 
 <39. 두 배열 합치기(병합정렬 응용)>

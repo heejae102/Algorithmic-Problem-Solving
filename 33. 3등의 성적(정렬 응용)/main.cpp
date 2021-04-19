@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 13분 (강의 풀이보다 성능이 좋은 새로운 풀이법 추가)
+
 /*
 
 <33. 3등의 성적은?(정렬 응용)>
@@ -38,6 +40,7 @@ int main()
 {
 	// 최초의 풀이 (강의 풀이와 동일)
 
+	/*
 	int n, idx, temp, res = 1;
 	int score[100]{ 0 };
 
@@ -72,6 +75,45 @@ int main()
 		{
 			cout << score[i] << endl; 
 			break;
+		}
+	}
+	*/
+
+	//============================================================================//
+
+	// 개선된 풀이 (정렬 과정에서 정답 도출)
+
+	int score[100]{ 0 }, n, idx, temp, count = 1;
+
+	cin >> n; 
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> score[i];
+	}
+
+	// 내림차순 정렬 
+
+	for (int i = 0; i < n - 1; i++)
+	{
+		idx = i;
+
+		for (int j = i + 1; j < n; j++)
+		{
+			if (score[j] > score[idx]) idx = j;
+		}
+
+		temp = score[i];
+		score[i] = score[idx];
+		score[idx] = temp;
+
+		if (i != 0 && score[i] != score[i - 1])
+		{
+			if (++count >= 3)
+			{
+				cout << score[i] << endl;
+				break;
+			}
 		}
 	}
 

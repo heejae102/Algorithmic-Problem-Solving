@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 10분 (강의 풀이는 복습 필요)
+
 /*
 
 <35. Special Sort(버블정렬 응용 : 구글 인터뷰)>
@@ -33,7 +35,7 @@ N개의 정수가 입력되면 당신은 입력된 값을 정렬해야 한다.
 
 int main()
 {
-	// 최초의 풀이1 (스와이프 횟수 : 11)
+	// 최초의 풀이 (스와이프 횟수 : 11)
 	// 선택정렬을 사용하면 양수의 순서를 바꿔버리므로 버블정렬을 사용해야 함.
 
 	/*
@@ -107,7 +109,7 @@ int main()
 		cout << num[i] << " ";
 	}
 
-	cout << endl << swipeCount << endl; 
+	//cout << endl << swipeCount << endl; 
 
 	return 0;
 }

@@ -3,6 +3,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 20분 (복습 필요 / 다양한 풀이법 복습하기)
+
 /*
 
 <38. Inversion Sequence(삽입정렬 응용)> 
@@ -44,8 +46,9 @@ n과 1부터 n까지의 수를 사용하여 이루어진 수열의 inversion sequence가 주어졌을 때
 
 int main()
 {
-	// 최초의 풀이 
+	// 최초의 풀이 (강의 풀이보다 성능이 우수)
 
+	/*
 	// 첫 번째 줄에 자연수 N(3 <= N < 100)이 주어지고,
 	// 두 번째 줄에는 inversion sequence가 숫자 사이에 한 칸의 공백을 두고 주어진다.
 
@@ -83,6 +86,7 @@ int main()
 	{
 		cout << res[i] << " ";
 	}
+	*/
 
 	//============================================================================//
 
@@ -123,7 +127,6 @@ int main()
 
 	// 강의 풀이 정리 
 
-	/*
 	int n, pos; 
 
 	cin >> n; 
@@ -143,7 +146,7 @@ int main()
 	{
 		pos = i; 
 
-		for (int i = 0; i < is[i]; i++)
+		for (int j = 0; j < is[i]; j++)
 		{
 			os[pos] = os[pos + 1];
 			pos++;
@@ -156,7 +159,6 @@ int main()
 	{
 		cout << os[i] << " ";
 	}
-	*/
 
 	return 0;
 }

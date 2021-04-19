@@ -2,6 +2,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 40분 (복습 필요 / 심지어 오답. 기억이 없다.)
+
 /*
 
 <37. Least Recently Used(삽입정렬 응용 : 카카오 인터뷰)> 

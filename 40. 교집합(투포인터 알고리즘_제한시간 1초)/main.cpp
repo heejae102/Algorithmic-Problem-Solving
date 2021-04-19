@@ -4,9 +4,11 @@
 #include<algorithm>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 14분
+
 /*
 
-<39. 교집합(투포인터 알고리즘 : MS 인터뷰, 제한시간 1초)>
+<40. 교집합(투포인터 알고리즘 : MS 인터뷰, 제한시간 1초)>
 
 두 집합 A, B가 주어지면 
 두 집합의 교집합을 출력하는 프로그램을 작성하세요.
@@ -62,7 +64,7 @@ int main()
 		cin >> arr2[i];
 	}
 
-	// 교집합 추출 
+	// 교집합 추출
 
 	for (int i = 0; i < n; i++)
 	{
@@ -86,8 +88,54 @@ int main()
 
 	//============================================================================//
 
+	// 새로운 풀이 (벡터 푸시백 이용)
+
+	vector<int> res;
+	int n, m, p1{ 0 }, p2{ 0 };
+
+	cin >> n; 
+
+	vector<int> arr1(n, 0);
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr1[i];
+	}
+
+	cin >> m; 
+
+	vector<int> arr2(m, 0);
+
+	for (int i = 0; i < m; i++)
+	{
+		cin >> arr2[i];
+	}
+
+	sort(arr1.begin(), arr1.end(), less<int>());
+	sort(arr2.begin(), arr2.end(), less<int>());
+
+	while (p1 < n && p2 < m)
+	{
+		if (arr1[p1] == arr2[p2])
+		{
+			res.push_back(arr1[p1]);
+			p1++;
+			p2++;
+		}
+		else if (arr1[p1] < arr2[p2]) p1++;
+		else if (arr1[p1] > arr2[p2]) p2++;
+	}
+
+	for (int i = 0; i < res.size(); i++)
+	{
+		cout << res[i] << " ";
+	}
+
+	//============================================================================//
+
 	// 강의 풀이 
 
+	/*
 	int n, m, p1 = 0, p2 = 0, p3 = 0;
 
 	cin >> n;
@@ -133,6 +181,7 @@ int main()
 	{
 		cout << res[i] << " ";
 	}
+	*/
 
 	return 0;
 }
