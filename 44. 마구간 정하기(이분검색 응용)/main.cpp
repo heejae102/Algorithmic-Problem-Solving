@@ -4,6 +4,8 @@
 #include<algorithm>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 20분 (복습 필요 / 못 풀었다.)
+
 /*
 
 <44. 마구간 정하기(이분검색 응용 : 결정 알고리즘)>

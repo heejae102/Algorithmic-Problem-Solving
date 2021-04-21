@@ -3,6 +3,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 25분 (복습 필요)
+
 /*
 
 <45. 공주 구하기(조세퍼스)>

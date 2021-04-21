@@ -3,6 +3,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 1시간 넘게 씨름했음. (복습 필요 / 이분검색 활용하기 복습)
+
 /*
 
 <43. 뮤직비디오(이분검색 응용 : 결정 알고리즘)>
@@ -69,6 +71,52 @@ int getCount(int s)
 
 int main()
 {
+	// 새로운 풀이 (이분 검색을 활용하지 않고 풀이)
+
+	int n, m, count = 1, sum = 0, total = 0, min;
+
+	cin >> n >> m;
+
+	vector<int> record(n);
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> record[i];
+
+		total += record[i];
+	}
+
+	// 가능한 가장 작은 최소값은 min일 것. 
+	// 여기서 실제 값과 비교하여 min 에서 값을 하나씩 늘려가ㄹ 것. 
+	min = total / m;
+
+	while (1)
+	{
+		count = 1;
+		sum = 0;
+
+		for (int i = 0; i < n; i++)
+		{
+			if (sum + record[i] > min)
+			{
+				count++;
+				sum = record[i];
+			}
+			else sum += record[i];
+		}
+
+		if (count <= m) break;
+
+		min++;
+	}
+
+	cout << min << endl; 
+
+	//============================================================================//
+
+	// 강의 풀이 
+
+	/*
 	int m, lt = 1, rt = 0, mid, res, max = numeric_limits<int>::min();
 
 	cin >> n >> m;
@@ -94,6 +142,7 @@ int main()
 	}
 
 	cout << res << endl; 
+	*/
 
 	return 0;
 }

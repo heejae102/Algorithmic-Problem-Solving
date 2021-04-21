@@ -4,6 +4,8 @@
 #include<algorithm>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 15분 (복습 필요)
+
 /*
 
 <42. 이분검색>
