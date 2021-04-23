@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std;
 
+// 1차 복습 풀이시간 : 20분 (복습 필요)
+
 /*
 
 <49. 쌓기 블록의 최댓값(2차원 배열 응용)>

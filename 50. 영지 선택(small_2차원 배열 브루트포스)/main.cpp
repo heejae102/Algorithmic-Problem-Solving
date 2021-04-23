@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 15분 
+
 /*
 
 <50. 영지 선택(small : 2차원 배열 브루트포스)>

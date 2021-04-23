@@ -2,6 +2,8 @@
 #include<cmath>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 16분 
+
 /*
 
 <48. 각 행의 평균과 가장 가까운 값(2차원 배열 탐색)>

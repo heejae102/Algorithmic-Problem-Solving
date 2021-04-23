@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std;
 
+// 1차 복습 풀이시간 : 20분 
+
 /*
 
 <46. 멀티태스킹(카카오 "먹방" 문제 변형)>

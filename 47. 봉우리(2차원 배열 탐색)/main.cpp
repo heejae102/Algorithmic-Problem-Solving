@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 17분 
+
 /*
 
 <47. 봉우리(2차원 배열 탐색)>

@@ -83,6 +83,7 @@ int main()
 
 	sort(input.begin(), input.end(), less<int>());
 
+	// 마지막 원소가 가장 마지막(거리가 먼) 좌표값 
 	rt = input[n - 1];
 
 	while (lt <= rt)
