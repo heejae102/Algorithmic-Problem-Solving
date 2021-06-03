@@ -3,6 +3,7 @@
 using namespace std; 
 
 // 1차 복습 풀이시간 : 5분
+// 2차 복습 풀이시간 : 3분 30초 이내 
 
 /*
 
@@ -83,7 +84,7 @@ int main()
 		cin >> input;
 
 		if (input < min) min = input;
-		if (input > max)max = input;
+		if (input > max) max = input;
 	}
 
 	cout << max - min;
