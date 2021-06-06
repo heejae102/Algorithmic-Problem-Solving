@@ -3,6 +3,7 @@
 using namespace std; 
 
 // 1차 복습 풀이시간 : 5분 
+// 2차 복습 풀이시간 : 7분 이내 
 
 /*
 
@@ -56,7 +57,7 @@ int main()
 	// 학생이 구한 정답이 공백을 사이에 두고 입력된다.
 
 	int n, num, answer, count = 0;
-	char res[11]{ 0 };
+	char res[10]{ 0 };
 
 	cin >> n;
 

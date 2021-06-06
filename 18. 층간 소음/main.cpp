@@ -3,6 +3,7 @@
 using namespace std; 
 
 // 1차 복습 풀이시간 : 7분 
+// 2차 복습 풀이시간 : 5분 이내 
 
 /*
 
@@ -68,6 +69,25 @@ int main()
 	}
 
 	(max > 0) ? printf("%d\n", max) : printf("-1\n");
+
+	//============================================================================// 
+
+	// 새로운 풀이 
+
+	int n, m, input, count = 0, max = 0;
+
+	cin >> n >> m;
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> input;
+
+		count = (input > m) ? count + 1 : 0;
+
+		if (count > max) max = count; 
+	}
+
+	(max == 0) ? cout << "-1" << endl : cout << max << endl;
 
 	return 0;
 }
