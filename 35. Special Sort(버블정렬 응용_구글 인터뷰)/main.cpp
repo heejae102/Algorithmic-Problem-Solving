@@ -3,6 +3,7 @@
 using namespace std; 
 
 // 1차 복습 풀이시간 : 10분 (강의 풀이는 복습 필요)
+// 2차 복습 풀이시간 : 9분 이내 
 
 /*
 
@@ -93,7 +94,7 @@ int main()
 	{
 		for (int j = 1; j < n - i; j++)
 		{
-			if (num[j] < 0 && num[j - 1]> 0)
+			if (num[j] < 0 && num[j - 1] > 0)
 			{
 				temp = num[j];
 				num[j] = num[j - 1];

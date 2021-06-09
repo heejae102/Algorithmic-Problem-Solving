@@ -1,8 +1,11 @@
 #include<stdio.h>
 #include<iostream>
+#include<vector>
+#include<algorithm>
 using namespace std; 
 
 // 1차 복습 풀이시간 : 13분 (강의 풀이보다 성능이 좋은 새로운 풀이법 추가)
+// 2차 복습 풀이시간 : 5분 30초 이내 
 
 /*
 
@@ -83,6 +86,7 @@ int main()
 
 	// 개선된 풀이 (정렬 과정에서 정답 도출)
 
+	/*
 	int score[100]{ 0 }, n, idx, temp, count = 1;
 
 	cin >> n; 
@@ -114,6 +118,36 @@ int main()
 				cout << score[i] << endl;
 				break;
 			}
+		}
+	}
+	*/
+
+	//============================================================================//
+
+	// 새로운 풀이 (직접 정렬 로직을 구현하지 않는 경우)
+
+	int n, count = 1;
+
+	cin >> n; 
+
+	vector<int> score(n);
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> score[i];
+	}
+
+	sort(score.begin(), score.end(), greater<int>());
+
+	for (int i = 1; i < n; i++)
+	{
+		if (score[i] != score[i - 1])
+		{
+			if (++count >= 3)
+			{
+				cout << score[i] << endl;
+				break;
+			}			
 		}
 	}
 
