@@ -3,6 +3,7 @@
 using namespace std; 
 
 // 1차 복습 풀이시간 : 40분 (복습 필요 / 심지어 오답. 기억이 없다.)
+// 2차 복습 풀이시간 : 23분 이내 (하드 코딩. 복습 필요)
 
 /*
 
@@ -146,8 +147,10 @@ int main()
 			}
 		}
 
-		if (pos == -1) startP = s - 1;
-		else startP = pos;
+		//if (pos == -1) startP = s - 1;
+		//else startP = pos;
+
+		startP = (pos == -1) ? s - 1 : pos;
 
 		for (int j = startP; j > 0; j--)
 		{

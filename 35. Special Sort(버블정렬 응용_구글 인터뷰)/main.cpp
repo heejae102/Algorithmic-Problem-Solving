@@ -50,6 +50,7 @@ int main()
 		cin >> num[i];
 	}
 
+	// idx를 증가시켜야하기 때문에 i는 반드시 0부터 시작해야 함. 
 	for (int i = 0; i < n; i++)
 	{
 		if (num[i] > 0) continue;
