@@ -4,6 +4,7 @@
 using namespace std; 
 
 // 1차 복습 풀이시간 : 20분 (복습 필요)
+// 2차 복습 풀이시간 : 18분 (복습 필요 / 연산자 중복 오류)
 
 /*
 
@@ -71,6 +72,9 @@ int main()
 			res[p3++] = arr2[p2++];
 		}
 	}
+
+	//for (int i = p1; p1 < n; p1++) res[p3++] = arr1[p1];
+	//for (int i = p2; p2 < m; p2++) res[p3++] = arr2[p2];
 
 	while (p1 < n) res[p3++] = arr1[p1++];
 	while (p2 < m) res[p3++] = arr2[p2++];
