@@ -4,6 +4,7 @@
 using namespace std; 
 
 // 1차 복습 풀이시간 : 1시간 넘게 씨름했음. (복습 필요 / 이분검색 활용하기 복습)
+// 2차 복습 풀이시간 : 24분 30초 내 
 
 /*
 
@@ -82,12 +83,11 @@ int main()
 	for (int i = 0; i < n; i++)
 	{
 		cin >> record[i];
-
 		total += record[i];
 	}
 
 	// 가능한 가장 작은 최소값은 min일 것. 
-	// 여기서 실제 값과 비교하여 min 에서 값을 하나씩 늘려가ㄹ 것. 
+	// 여기서 실제 값과 비교하여 min 에서 값을 하나씩 늘려갈 것. 
 	min = total / m;
 
 	while (1)
@@ -97,12 +97,22 @@ int main()
 
 		for (int i = 0; i < n; i++)
 		{
-			if (sum + record[i] > min)
+			//if (sum + record[i] > min)
+			//{
+			//	count++;
+			//	sum = record[i];
+			//}
+			//else sum += record[i];			
+
+			sum += record[i];
+
+			if (sum > min)
 			{
 				count++;
 				sum = record[i];
+
+				if (count > m) break;
 			}
-			else sum += record[i];
 		}
 
 		if (count <= m) break;
@@ -114,7 +124,7 @@ int main()
 
 	//============================================================================//
 
-	// 강의 풀이 
+	// 강의 풀이 (이분검색을 활용하는 것이 더 효율적인지는 의문...)
 
 	/*
 	int m, lt = 1, rt = 0, mid, res, max = numeric_limits<int>::min();
