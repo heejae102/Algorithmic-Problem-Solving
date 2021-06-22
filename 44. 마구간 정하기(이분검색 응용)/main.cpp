@@ -5,6 +5,7 @@
 using namespace std; 
 
 // 1차 복습 풀이시간 : 20분 (복습 필요 / 못 풀었다.)
+// 2차 복습 풀이시간 : 23분 내 (최적화 필요)
 
 /*
 
@@ -66,6 +67,24 @@ int getCount(int distance)
 
 	return count;
 }
+
+/*
+int getCount(int distance)
+{
+	int count = 1, prePos = input[0];
+
+	for (int i = 1; i < n; i++)
+	{
+		if (input[i] - prePos >= distance)
+		{
+			count++;
+			prePos = input[i];
+		}
+	}
+
+	return count;
+}
+*/
 
 int main()
 {

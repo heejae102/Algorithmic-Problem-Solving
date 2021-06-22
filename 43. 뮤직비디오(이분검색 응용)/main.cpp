@@ -145,6 +145,8 @@ int main()
 
 		if (getCount(mid) <= m)
 		{
+			// m보다 작은 경우의 mid 값만 성립하므로 (이후 연산에서 값이 변할 수 있음)
+			// res에 mid 값을 별개로 저장해야 함. 
 			res = mid;
 			rt = mid - 1;
 		}

@@ -3,6 +3,7 @@
 using namespace std;
 
 // 1차 복습 풀이시간 : 20분 
+// 2차 복습 풀이시간 : 14분 내(복습 필요 / 예외처리 오류)
 
 /*
 
@@ -136,7 +137,6 @@ int main()
 	while (1)
 	{
 		pos++;
-
 		if (pos > n) pos = 1;
 
 		if (task[pos] == 0) continue; 
