@@ -3,6 +3,7 @@
 using namespace std;
 
 // 1차 복습 풀이시간 : 20분 (복습 필요)
+// 2차 복습 풀이시간 : 12분 내 
 
 /*
 
@@ -114,8 +115,41 @@ int main()
 
 	//============================================================================//
 
+	// 개선된 풀이 (입력과 동시에 계산)
+
+	int n, input, count = 0, arr[10][10]{ 0 };
+
+	cin >> n;
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> input;
+
+		for (int j = 0; j < n; j++)
+		{
+			arr[j][i] = input;
+		}
+	}
+
+	for (int i = n - 1; i >= 0; i--)
+	{
+		cin >> input;
+
+		for (int j = 0; j < n; j++)
+		{
+			if (arr[i][j] > input) arr[i][j] = input; 
+
+			count += arr[i][j];
+		}
+	}
+
+	cout << count << endl; 
+
+	//============================================================================//
+
 	// 강의 풀이 (변수 하나를 줄이고 입력과 동시에 계산) 
 
+	/*
 	int block[10][10]{ 0 }, input[10]{ 0 }, n, res = 0;
 
 	cin >> n;
@@ -151,6 +185,7 @@ int main()
 	}
 
 	cout << res << endl; 
+	*/
 
 	return 0;
 }
