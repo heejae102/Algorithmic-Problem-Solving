@@ -2,6 +2,8 @@
 #include<stack>
 using namespace std;
 
+// 1차 복습 풀이시간 : 8분 30초 내 (강의 풀이 복습 필요)
+
 /*
 
 <54. 올바른 괄호(STL 스택 자료구조 활용)>
@@ -71,7 +73,6 @@ int main()
 
 	// 최초의 풀이 (STL 스택 활용)
 	
-	/*
 	stack<char> s;
 
 	char str[31]{ 0 };
@@ -97,12 +98,12 @@ int main()
 	}
 
 	(s.empty()) ? cout << "YES" << endl : cout << "NO" << endl;
-	*/
 
 	//============================================================================//
 
 	// 강의 풀이 (flag를 꼭 써야할까...? return하지 않으면 안되는걸까?)
 
+	/*
 	stack<char> s;
 
 	char str[31]{ 0 };
@@ -130,6 +131,7 @@ int main()
 	}
 	
 	if(flag) (s.empty()) ? cout << "YES" << endl : cout << "NO" << endl;
+	*/
 
 	return 0;
 }

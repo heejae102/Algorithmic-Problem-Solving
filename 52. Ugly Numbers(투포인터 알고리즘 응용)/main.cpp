@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 10분 30초 내 (복습 필요 / 시간 초과) 
+
 /*
 
 <52. Ugly Numbers(투포인터 알고리즘 응용)>
@@ -82,8 +84,68 @@ int main()
 
 	//============================================================================//
 
+	// 새로운 풀이 (시간 초과 / 최초의 풀이 정리)
+
+	/*
+	int n, i, temp, num = 1, count = 1;
+
+	cin >> n;
+
+	while (count < n)
+	{
+		temp = ++num;
+		i = 2;
+		count++;
+
+		while (temp != 1)
+		{
+			if (temp % i == 0) temp /= i;
+			else i++;
+
+			if (i > 5)
+			{
+				count--;
+				break;
+			}
+		}
+	}
+
+	cout << num << endl;
+	*/
+
+	//============================================================================//
+
+	// 개선된 풀이 (강의 풀이 정리)
+
+	int n, p2, p3, p5, min = numeric_limits<int>::max();
+
+	cin >> n;
+
+	vector<int> num(n + 1, 0);
+
+	num[1] = 1;
+
+	p2 = p3 = p5 = 1;
+
+	for (int i = 2; i <= n; i++)
+	{
+		min = (num[p2] * 2 < num[p3] * 3) ? num[p2] * 2 : num[p3] * 3;
+		min = (num[p5] * 5 < min) ? num[p5] * 5 : min;
+
+		if (num[p2] * 2 == min) p2++;
+		if (num[p3] * 3 == min) p3++;
+		if (num[p5] * 5 == min) p5++;
+
+		num[i] = min;
+	}
+
+	cout << num[n] << endl;
+
+	//============================================================================//
+
 	// 강의 풀이 
 
+	/*
 	int n, p2, p3, p5, min = numeric_limits<int>::max();
 
 	cin >> n;
@@ -108,6 +170,7 @@ int main()
 	}
 
 	cout << num[n] << endl;
+	*/
 
 	return 0;
 }

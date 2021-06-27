@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 못 풀었음. (복습 필요)
+
 /*
 
 <51. 영지 선택(large : 2차원 배열 구간합 : 제한시간 1초 : DP)>

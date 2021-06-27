@@ -2,6 +2,8 @@
 #include<stack>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 못 풀었음. (복습 필요)
+
 /*
 
 <53. K진수 출력(스택 자료구조 구현)>

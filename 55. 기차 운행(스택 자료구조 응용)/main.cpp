@@ -3,6 +3,8 @@
 #include<vector>
 using namespace std; 
 
+// 1차 복습 풀이시간 : 30분 내 (복습 필요 / 예외처리 오류)
+
 /*
 
 <55. 기차 운행(스택 자료구조 응용)>
