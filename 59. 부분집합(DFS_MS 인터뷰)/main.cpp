@@ -39,8 +39,7 @@ int n, ch[11]{ 0 };
 
 void DFS(int L)
 {
-	int i;
-
+	// 종료지점 
 	if (L == n + 1)
 	{
 		for (int i = 1; i <= n; i++)
@@ -48,7 +47,7 @@ void DFS(int L)
 			if (ch[i] == 1) cout << i << " ";
 		}
 
-		puts("");
+		cout << endl;
 	}
 	else
 	{
@@ -63,10 +62,9 @@ int main()
 {
 	// 강의 풀이 
 
-	int n;
 	cin >> n;
 
-	DFS(n);
+	DFS(1);
 
 	return 0;
 }
