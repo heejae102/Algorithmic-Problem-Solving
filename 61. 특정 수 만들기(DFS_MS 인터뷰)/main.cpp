@@ -32,76 +32,46 @@ N개의 원소로 구성된 자연수 집합이 주어지면,
 
 =============================================================================
 
-▶ 입력예제1
+▶ 입력예제
 4 12
 2 4 6 8
 
-▶ 출력예제1
+▶ 출력예제
 4
 
 */
 
-int n, ch[11]{ 0 }, arr[11]{ 0 };
-vector<int> sum;
+int arr[11]{ 0 }, n, m, res = 0;
 
-void DFS(int x)
+void DFS(int L, int sum)
 {
-	if (x == n)
+	if (L == n)
 	{
-		int count = 0;
-
-		for (int i = 0; i < n; i++)
-		{
-			if (ch[i] == 1) count += arr[i];
-		}
-
-		sum.push_back(count);
+		if (sum == m) res++;
 	}
 	else
 	{
-		ch[x] = 1;
-		DFS(x + 1);
-		ch[x] = 0;
-		DFS(x + 1);
+		// +, -, 미포함의 경우의 수를 모두 계산
+		DFS(L + 1, sum + arr[L]);
+		DFS(L + 1, sum - arr[L]);
+		DFS(L + 1, sum);
 	}
 }
 
 int main()
 {
-	// 최초의 풀이 (하나의 테스트 케이스에 대해 오류 발생)
+	// 강의 풀이 
 
-	cin >> n;
+	cin >> n >> m;
 
 	for (int i = 0; i < n; i++)
 	{
 		cin >> arr[i];
 	}
 
-	DFS(0);
+	DFS(0, 0);
 
-	for (int i = 0; i < sum.size(); i++)
-	{
-		for (int j = 0; j < sum.size(); j++)
-		{
-			if (i != j && sum[i] == sum[j])
-			{
-				cout << "YES" << endl;
-				cout << sum[i] << endl;
-				return 0;
-			}
-		}
-	}
-
-	cout << "NO" << endl;
-
-	//============================================================================//
-
-	// 강의 풀이 
-
-	int n;
-	cin >> n;
-
-
+	(res > 0) ? cout << res << endl : cout << -1 << endl;
 
 	return 0;
 }

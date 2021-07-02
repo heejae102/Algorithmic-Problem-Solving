@@ -36,6 +36,7 @@ YES
 
 */
 
+/*
 int n, ch[11]{ 0 }, arr[11]{ 0 };
 vector<int> sum;
 
@@ -60,11 +61,36 @@ void DFS(int x)
 		DFS(x + 1);
 	}
 }
+*/
+
+int n, flag = 0, total = 0, arr[11]{ 0 };
+
+void DFS(int L, int sum)
+{
+	// 두 부분집합의 원소 값이 같다면 하나의 부분집합 당 원소 합이 "전체원소값/2"일 것.
+	// 즉, 부분집합의 합이 "전체원소값/2"보다 크다면 더이상 검사할 필요가 없음.
+	if (sum > (total * 0.5f)) return;
+	if (flag & 1) return;
+
+	if (L == n)
+	{
+		if (sum == (total - sum)) flag = 1;
+	}
+	else
+	{
+		// 1 3 5 6 7 10
+		// 부분집합에 원소값 포함/미포함 
+		DFS(L + 1, sum + arr[L]);
+		DFS(L + 1, sum);
+	}
+}
+
 
 int main()
 {
-	// 최초의 풀이 
+	// 최초의 풀이 (부분집합이 3개 이상인 경우의 수도 존재하므로 테스트 오류 발생)
 
+	/*
 	cin >> n;
 
 	for (int i = 0; i < n; i++)
@@ -88,15 +114,26 @@ int main()
 	}
 
 	cout << "NO" << endl;
+	*/
 
 	//============================================================================//
 
 	// 강의 풀이 
 
-	int n;
+	// 하나의 부분집합 값이 구해졌을 때 나머지 전체 원소(부분집합)와 비교하면
+	// 두 부분집합의 원소의 합을 비교할 수 있다. 
+
 	cin >> n;
 
+	for (int i = 0; i < n; i++)
+	{
+		cin >> arr[i];
+		total += arr[i];
+	}
 
+	DFS(0, 0);
+
+	(flag & 1) ? cout << "YES" << endl : cout << "NO" << endl;
 
 	return 0;
 }

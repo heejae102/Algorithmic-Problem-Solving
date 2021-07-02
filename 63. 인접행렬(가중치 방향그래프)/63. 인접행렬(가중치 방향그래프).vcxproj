@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{AD0F7487-B95C-4D49-8C40-516E7FE45E34}</ProjectGuid>
-    <RootNamespace>My61특정수만들기DFSMS인터뷰</RootNamespace>
+    <ProjectGuid>{1DAD1D46-5065-412C-A4E0-0CD9CC91279B}</ProjectGuid>
+    <RootNamespace>My63인접행렬가중치방향그래프</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
