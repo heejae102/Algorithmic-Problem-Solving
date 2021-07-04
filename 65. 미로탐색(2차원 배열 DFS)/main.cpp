@@ -47,12 +47,53 @@ using namespace std;
 
 */
 
+int maze[8][8]{ 0 }, ch[8][8]{ 0 };
+int dx[4]{ -1, 0, 1, 0 }, dy[4]{ 0, 1, 0, -1 };
+int res = 0;
+
+void DFS(int h, int w)
+{
+	int x, y;
+
+	if (h == 7 && w == 7)
+	{
+		res++;
+	}
+	else
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			x = h + dx[i];
+			y = w + dy[i];
+
+			if (x < 1 || x > 7 || y < 1 || y > 7) continue;
+
+			if (maze[x][y] == 0 && ch[x][y] == 0)
+			{
+				ch[x][y] = 1;
+				DFS(x, y);
+				ch[x][y] = 0;
+			}
+		}
+	}
+}
+
 int main()
 {
 	// 강의 풀이 
 
-	int n;
-	cin >> n;
+	for (int i = 1; i <= 7; i++)
+	{
+		for (int j = 1; j <= 7; j++)
+		{
+			cin >> maze[i][j];
+		}
+	}
+
+	ch[1][1] = 1;
+	DFS(1, 1);
+
+	cout << res << endl; 
 
 	return 0;
 }
