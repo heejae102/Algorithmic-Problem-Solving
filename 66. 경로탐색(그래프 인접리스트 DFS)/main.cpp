@@ -1,9 +1,12 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 /*
 
 <66. 경로탐색(DFS : 인접리스트 방법)>
+
+인접리스트 방식은 인접행렬보다 메모리를 적게 사용할 수 있으므로 효율적 
 
 방향그래프가 주어지면 1번 정점에서 N번 정점으로 가는 
 모든 경로의 가지 수를 출력하는 프로그램을 작성하세요. 
@@ -46,12 +49,46 @@ using namespace std;
 
 */
 
+int ch[21]{ 0 }, res = 0, n;
+vector<int> map[21];
+
+void DFS(int v)
+{
+	if (v == n)
+	{
+		res++;
+	}
+	else
+	{
+		for (int i = 0; i < map[v].size(); i++)
+		{
+			if (ch[map[v][i]] != 0) continue;
+		
+			ch[map[v][i]] = 1;
+			DFS(map[v][i]);
+			ch[map[v][i]] = 0;
+		}
+	}
+}
+
 int main()
 {
 	// 강의 풀이 
 
-	int n;
-	cin >> n;
+	int m, a, b;
+
+	cin >> n >> m;
+
+	for (int i = 0; i < m; i++)
+	{
+		cin >> a >> b;
+		map[a].push_back(b);
+	}
+
+	ch[1] = 1;
+	DFS(1);
+
+	cout << res << endl; 
 
 	return 0;
 }
