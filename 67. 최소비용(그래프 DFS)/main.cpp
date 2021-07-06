@@ -35,12 +35,47 @@ using namespace std;
 
 */
 
+int arr[21][21]{ 0 }, ch[21]{ 0 };
+int n, min = numeric_limits<int>::max();
+
+void DFS(int v, int sum)
+{
+	if (v == n)
+	{
+		if (sum < min) min = sum;
+	}
+	else
+	{
+		for (int i = 1; i <= n; i++)
+		{
+			if (arr[v][i] != 0 && ch[i] == 0)
+			{
+				ch[i] = 1;
+				DFS(i, sum + arr[v][i]);
+				ch[i] = 0;
+			}
+		}
+	}
+}
+
 int main()
 {
-	// 강의 풀이 
+	// 최초의 풀이 (강의 풀이와 동일) 
 
-	int n;
-	cin >> n;
+	int m, a, b, c;
+
+	cin >> n >> m;
+
+	for (int i = 0; i < m; i++)
+	{
+		cin >> a >> b >> c;
+		arr[a][b] = c;
+	}
+
+	ch[1] = 1;
+	DFS(1, 0);
+
+	cout << min << endl;
 
 	return 0;
 }

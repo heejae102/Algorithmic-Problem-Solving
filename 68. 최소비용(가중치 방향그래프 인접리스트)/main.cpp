@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 
 /*
@@ -35,12 +36,47 @@ using namespace std;
 
 */
 
+int ch[21]{ 0 }, n, min = numeric_limits<int>::max();
+vector<pair<int, int>> graph[21];
+
+void DFS(int v, int sum)
+{
+	if (v == n)
+	{
+		if (sum < min) min = sum;
+	}
+	else
+	{
+		for (int i = 0; i < graph[v].size(); i++)
+		{
+			if (ch[graph[v][i].first] != 0) continue;
+
+			ch[graph[v][i].first] = 1;
+			DFS(graph[v][i].first, sum + graph[v][i].second);
+			ch[graph[v][i].first] = 0;
+		}
+	}
+}
+
 int main()
 {
-	// 강의 풀이 
+	// 최초의 풀이 
 
-	int n;
-	cin >> n;
+	int m, a, b, c;
+	
+	cin >> n >> m;
+
+	for (int i = 0; i < m; i++)
+	{
+		cin >> a >> b >> c;
+
+		graph[a].push_back({ b,c });
+	}
+
+	ch[1] = 1;
+	DFS(1, 0);
+
+	cout << min << endl; 
 
 	return 0;
 }
