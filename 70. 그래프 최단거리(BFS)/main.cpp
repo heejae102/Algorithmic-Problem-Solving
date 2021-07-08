@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<queue>
 using namespace std;
 
 /*
@@ -44,32 +45,40 @@ int main()
 {
 	// 강의 풀이 
 
-	int Q[100]{ 0 }, ch[10]{ 0 };
-	vector<int> map[10];
-	int edge = 6, front = -1, back = -1, a, b, x;
+	int ch[21]{ 0 }, dis[21]{ 0 }, n, m, a, b, temp;
+	vector<int> map[21];
+	queue<int> Q;
+	
+	cin >> n >> m;
 
-	for (int i = 0; i < edge; i++)
+	for (int i = 0; i < m; i++)
 	{
 		cin >> a >> b;
+
 		map[a].push_back(b);
-		map[b].push_back(a);
 	}
 
-	Q[++back] = 1;
+	Q.push(1);
 	ch[1] = 1;
 
-	while (front < back)
+	while (!Q.empty())
 	{
-		x = Q[++front];
-		cout << x << " ";
+		temp = Q.front();
+		Q.pop();
 
-		for (int i = 0; i < map[x].size(); i++)
+		for (int i = 0; i < map[temp].size(); i++)
 		{
-			if (ch[map[x][i]] != 0) continue;
+			if (ch[map[temp][i]] != 0) continue;
 
-			ch[map[x][i]] = 1;
-			Q[++back] = map[x][i];
+			ch[map[temp][i]] = 1;
+			Q.push(map[temp][i]);
+			dis[map[temp][i]] = dis[temp] + 1;
 		}
+	}
+
+	for (int i = 2; i <= n; i++)
+	{
+		cout << i << " : " << dis[i] << endl;
 	}
 
 	return 0;
