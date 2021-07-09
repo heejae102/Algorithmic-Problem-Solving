@@ -29,7 +29,7 @@ N과 K가 주어질 때 공주를 구하러 갈 왕자의 번호를 출력하는 프로그램을 작성하시오.
 =============================================================================
 
 ▶ 입력설명
-첫 줄에 자연수 N(5<=N<=1,000)과 K(2<=K<=9)가 주어진다.
+첫 줄에 자연수 N(5 <= N <= 1,000)과 K(2 <= K <= 9)가 주어진다.
 
 ▶ 출력설명
 첫 줄에 마지막 남은 왕자의 번호를 출력합니다.
@@ -46,41 +46,93 @@ N과 K가 주어질 때 공주를 구하러 갈 왕자의 번호를 출력하는 프로그램을 작성하시오.
 
 int main()
 {
-	// 강의 풀이 
+	// 최초의 풀이 
 
-	int ch[10001]{ 0 }, d[3]{ -1,1,5 };
-	int s, e, temp, pos;
+	/*
+	int n, k, temp, count = 0;
 	queue<int> Q;
 
-	cin >> s >> e;
+	cin >> n >> k;
 
-	ch[s] = 0;
-	Q.push(s);
+	for (int i = 1; i <= n; i++)
+	{
+		Q.push(i);
+	}
 
-	while (!Q.empty())
+	while (Q.size() > 1)
 	{
 		temp = Q.front();
 		Q.pop();
 
-		for (int i = 0; i < 3; i++)
+		count++;
+
+		if (count == k) count = 0;
+		else Q.push(temp);
+	}
+
+	cout << Q.front() << endl;
+	*/
+
+	//============================================================================//
+
+	// 새로운 풀이 (강의 풀이 개선)
+
+	int n, k;
+	queue<int> Q;
+
+	cin >> n >> k;
+
+	for (int i = 1; i <= n; i++)
+	{
+		Q.push(i);
+	}
+
+	while (Q.size() > 1)
+	{
+		for (int i = 1; i < k; i++)
 		{
-			pos = temp + d[i];
+			Q.push(Q.front());
+			Q.pop();
+		}
 
-			if (pos <= 0 || pos > 10000) continue;
+		Q.pop();
+	}
 
-			if (pos == e)
-			{
-				cout << ch[temp] + 1 << endl;
-				return 0;
-			}
+	cout << Q.front() << endl;
 
-			if (ch[pos] == 0)
-			{
-				ch[pos] = ch[temp] + 1;
-				Q.push(pos);
-			}
+	//============================================================================//
+
+	// 강의 풀이 
+
+	/*
+	int n, k;
+	queue<int> Q;
+
+	cin >> n >> k;
+
+	for (int i = 1; i <= n; i++)
+	{
+		Q.push(i);
+	}
+
+	while (!Q.empty())
+	{
+		for (int i = 1; i < k; i++)
+		{
+			Q.push(Q.front());
+			Q.pop();
+		}
+
+		Q.pop();
+
+		if (Q.size() == 1)
+		{
+			cout << Q.front() << endl;
+			Q.pop();
 		}
 	}
+	*/
+
 
 	return 0;
 }

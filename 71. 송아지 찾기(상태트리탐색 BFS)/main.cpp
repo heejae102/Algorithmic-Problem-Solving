@@ -46,7 +46,7 @@ int main()
 
 	cin >> s >> e;
 
-	ch[s] = 0;
+	ch[s] = 1;
 	Q.push(s);
 
 	while (!Q.empty())
@@ -58,19 +58,19 @@ int main()
 		{
 			pos = temp + d[i];
 
-			if (pos <= 0 || pos > 10000) continue;
+			if (pos < 1 || pos > 10000) continue;
 
 			if (pos == e)
 			{
-				cout << ch[temp] + 1 << endl;
+				// 처음 ch[s] 값을 초기화할 때 1을 넣었기 때문. (0으로 초기화 시 해당 좌표로 다시 이동할 수 있음.)
+				cout << ch[temp] << endl;
 				return 0;
 			}
 
-			if (ch[pos] == 0)
-			{
-				ch[pos] = ch[temp] + 1;
-				Q.push(pos);
-			}
+			if (ch[pos] != 0) continue;
+
+			ch[pos] = ch[temp] + 1;
+			Q.push(pos);
 		}
 	}
 
