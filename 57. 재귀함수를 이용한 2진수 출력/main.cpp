@@ -2,6 +2,8 @@
 #include<stack>
 using namespace std;
 
+// 1차 복습 풀이시간 : 3분 30초 내 
+
 /*
 
 <57. 재귀함수 이진수 출력>

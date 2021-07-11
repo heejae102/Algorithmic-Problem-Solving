@@ -7,7 +7,7 @@ using namespace std;
 
 <75. 최대 수입 스케줄(priority_queue 응용문제)>
 
-현수는 유명한 강연자이다. N개이 기업에서 강연 요청을 해왔다. 
+현수는 유명한 강연자이다. N개의 기업에서 강연 요청을 해왔다. 
 각 기업은 D일 안에 와서 강연을 해 주면 M만큼의 강연료를 주기로 했다.
 
 각 기업이 요청한 D와 M를 바탕으로 가장 많을 돈을 벌 수 있도록 강연 스케쥴을 짜야 한다.
@@ -38,31 +38,63 @@ using namespace std;
 
 */
 
+struct Data
+{
+	int money;
+	int when;
+
+	Data(int a, int b)
+	{
+		money = a;
+		when = b;
+	}
+
+	bool operator<(Data &b)
+	{
+		// 내림차순 정렬 
+		return when > b.when;
+	}
+};
+
 int main()
 {
 	// 강의 풀이 
 
-	int a;
+	int n, j, a, b, res = 0, max = numeric_limits<int>::min();
 
+	vector<Data> T; 
 	priority_queue<int> pQ;
 
-	while (true)
+	cin >> n;
+
+	for (int i = 0; i < n; i++)
 	{
-		cin >> a;
+		cin >> a >> b;
+		T.push_back(Data(a, b));
 
-		if (a == -1) break;
-
-		if (a == 0)
-		{
-			if (pQ.empty()) cout << -1 << endl;
-			else
-			{
-				cout << pQ.top() << endl;
-				pQ.pop();
-			}
-		}
-		else pQ.push(a);
+		if (b > max) max = b;
 	}
+
+	sort(T.begin(), T.end());
+
+	j = 0;
+
+	for (int i = max; i >= 1; i--)
+	{
+		for ( ; j < n; j++)
+		{
+			if (T[j].when < i) break;
+			pQ.push(T[j].money);
+		}
+
+		if (!pQ.empty())
+		{
+			res += pQ.top();
+			pQ.pop();
+		}
+	}
+
+	cout << res << endl; 
 
 	return 0;
 }

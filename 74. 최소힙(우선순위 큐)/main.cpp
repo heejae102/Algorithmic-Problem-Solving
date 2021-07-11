@@ -60,6 +60,9 @@ int main()
 {
 	// 강의 풀이 
 
+	// 자료를 삽입 시 -를 곱해서 음수로 변경하면 본래 더 작았던 수가 루트 노드로 가게 됨. 
+	// 이를 이용하여 최소힙으로 구성 후 원소값을 받아올 때는 다시 -를 곱하여 원래의 값으로 변경. 
+
 	int a;
 
 	priority_queue<int> pQ;
@@ -75,11 +78,11 @@ int main()
 			if (pQ.empty()) cout << -1 << endl;
 			else
 			{
-				cout << pQ.top() << endl;
+				cout << -pQ.top() << endl;
 				pQ.pop();
 			}
 		}
-		else pQ.push(a);
+		else pQ.push(-a);
 	}
 
 	return 0;

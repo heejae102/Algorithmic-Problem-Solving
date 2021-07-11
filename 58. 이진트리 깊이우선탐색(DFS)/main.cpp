@@ -2,6 +2,8 @@
 #include<stack>
 using namespace std;
 
+// 1차 복습 풀이시간 : 5분 내 
+
 /*
 
 <58. 이진트리 깊이우선탐색(DFS)>

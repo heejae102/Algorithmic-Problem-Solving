@@ -71,6 +71,7 @@ int main()
 		cin >> a >> b >> c;
 
 		graph[a].push_back({ b,c });
+		//graph[a].push_back(make_pair(b, c));
 	}
 
 	ch[1] = 1;

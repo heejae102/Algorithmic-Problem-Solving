@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// 1차 복습 풀이시간 : 2분 30초 내 
+
 /*
 
 <56. 재귀함수 분석(스택을 이용하는 재귀)>

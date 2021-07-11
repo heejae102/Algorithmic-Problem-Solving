@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std;
 
+// 1차 복습 풀이시간 : 10분 내 (복습 필요)
+
 /*
 
 <60. 합이 같은 부분집합(DFS : 아마존 인터뷰)>

@@ -2,6 +2,8 @@
 #include<stack>
 using namespace std;
 
+// 1차 복습 풀이시간 : 18분 내(오답 / 복습 필요)
+
 /*
 
 <59. 부분집합(DFS : MS 인터뷰)>
