@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// 1차 복습 풀이시간 : 13분 30초 내 (체크 누락 / 복습 필요)
+
 /*
 
 <65. 미로탐색(2차원 DFS)>
@@ -51,6 +53,7 @@ int maze[8][8]{ 0 }, ch[8][8]{ 0 };
 int dx[4]{ -1, 0, 1, 0 }, dy[4]{ 0, 1, 0, -1 };
 int res = 0;
 
+/*
 void DFS(int h, int w)
 {
 	int x, y;
@@ -74,6 +77,32 @@ void DFS(int h, int w)
 				DFS(x, y);
 				ch[x][y] = 0;
 			}
+		}
+	}
+}
+*/
+
+void DFS(int h, int w)
+{
+	int x, y;
+
+	if (h == 7 && w == 7)
+	{
+		res++;
+	}
+	else
+	{
+		for (int i = 0; i < 4; i++)
+		{
+			x = h + dx[i];
+			y = w + dy[i];
+
+			if (x < 1 || x > 7 || y < 1 || y > 7 ||
+				maze[x][y] != 0 || ch[x][y] != 0) continue;
+
+			ch[x][y] = 1;
+			DFS(x, y);
+			ch[x][y] = 0;
 		}
 	}
 }

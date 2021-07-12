@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// 1차 복습 풀이시간 : 10분 30초 내 (복습 필요)
+
 /*
 
 <64. 경로탐색(그래프 DFS)>
@@ -49,6 +51,7 @@ using namespace std;
 
 int map[30][30]{ 0 }, ch[30]{ 0 }, res = 0, n;
 
+/*
 void DFS(int v)
 {
 	if (v == n)
@@ -65,6 +68,26 @@ void DFS(int v)
 				DFS(i);
 				ch[i] = 0;
 			}
+		}
+	}
+}
+*/
+
+void DFS(int v)
+{
+	if (v == n)
+	{
+		res++;
+	}
+	else
+	{
+		for (int i = 1; i <= n; i++)
+		{
+			if (map[v][i] != 1 || ch[i] != 0) continue;
+
+			ch[i] = 1;
+			DFS(i);
+			ch[i] = 0;
 		}
 	}
 }

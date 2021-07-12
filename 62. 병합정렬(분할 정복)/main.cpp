@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// 1차 복습 풀이시간 : 10분 내 (복습 필요)
+
 /*
 
 <62. 병합정렬(분할 정복)>

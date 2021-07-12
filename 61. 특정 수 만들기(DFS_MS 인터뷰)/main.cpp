@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std;
 
+// 1차 복습 풀이시간 : 5분 내
+
 /*
 
 <61. 특정 수 만들기(DFS : MS 인터뷰)>

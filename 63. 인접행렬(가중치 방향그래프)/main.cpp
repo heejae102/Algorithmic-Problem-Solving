@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// 1차 복습 풀이시간 : 4분 내 
+
 /*
 
 <63. 인접행렬(가중치 방향그래프)>
