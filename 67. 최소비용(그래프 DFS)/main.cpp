@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// 1차 복습 풀이시간 : 6분 30초 내 
+
 /*
 
 <67. 최소비용(DFS : 인접행렬)>

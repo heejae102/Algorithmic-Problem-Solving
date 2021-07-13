@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std;
 
+// 1차 복습 풀이시간 : 6분 내 
+
 /*
 
 <68. 최소비용(DFS : 가중치 방향그래프 인접리스트)>

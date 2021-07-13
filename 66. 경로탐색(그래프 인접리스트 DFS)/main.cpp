@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std;
 
+// 1차 복습 풀이시간 : 5분 내 
+
 /*
 
 <66. 경로탐색(DFS : 인접리스트 방법)>

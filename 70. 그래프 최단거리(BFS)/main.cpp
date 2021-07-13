@@ -3,6 +3,8 @@
 #include<queue>
 using namespace std;
 
+// 1차 복습 풀이시간 : 7분 30초 내 (체크 누락 / 복습 필요)
+
 /*
 
 <70. 그래프 최단거리(BFS)>

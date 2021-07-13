@@ -2,6 +2,8 @@
 #include<vector>
 using namespace std;
 
+// 1차 복습 풀이시간 : 12분 내 (복습 필요)
+
 /*
 
 <69. 이진트리 너비우선탐색(BFS)>
