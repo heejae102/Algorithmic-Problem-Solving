@@ -3,6 +3,8 @@
 #include<queue>
 using namespace std;
 
+// 1차 복습 풀이시간 : 12분 내 (예외처리 필요)
+
 /*
 
 <71. 송아지 찾기(BFS : 상태트리탐색)>

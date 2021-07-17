@@ -3,6 +3,8 @@
 #include<queue>
 using namespace std;
 
+// 1차 복습 문제풀이 : 7분 내 
+
 /*
 
 <72. 공주 구하기(큐 자료구조 응용)>
