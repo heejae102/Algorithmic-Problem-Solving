@@ -3,6 +3,8 @@
 #include<queue>
 using namespace std;
 
+// 1차 복습 풀이시간 : 15분 내 (오답 / 복습 필요)
+
 /*
 
 <75. 최대 수입 스케줄(priority_queue 응용문제)>
