@@ -165,6 +165,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "74. 최소힙(우선순위 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "75. 최대 수입 스케줄(우선순위 큐)", "75. 최대 수입 스케줄(우선순위 큐)\75. 최대 수입 스케줄(우선순위 큐).vcxproj", "{8C8FED15-30F4-453A-98A2-A3BE8AE9C289}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "76. 이항계수(메모이제이션)", "76. 이항계수(메모이제이션)\76. 이항계수(메모이제이션).vcxproj", "{2376236D-18C4-4D73-823B-7583F88BC1C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -781,6 +783,14 @@ Global
 		{8C8FED15-30F4-453A-98A2-A3BE8AE9C289}.Release|x64.Build.0 = Release|x64
 		{8C8FED15-30F4-453A-98A2-A3BE8AE9C289}.Release|x86.ActiveCfg = Release|Win32
 		{8C8FED15-30F4-453A-98A2-A3BE8AE9C289}.Release|x86.Build.0 = Release|Win32
+		{2376236D-18C4-4D73-823B-7583F88BC1C2}.Debug|x64.ActiveCfg = Debug|x64
+		{2376236D-18C4-4D73-823B-7583F88BC1C2}.Debug|x64.Build.0 = Debug|x64
+		{2376236D-18C4-4D73-823B-7583F88BC1C2}.Debug|x86.ActiveCfg = Debug|Win32
+		{2376236D-18C4-4D73-823B-7583F88BC1C2}.Debug|x86.Build.0 = Debug|Win32
+		{2376236D-18C4-4D73-823B-7583F88BC1C2}.Release|x64.ActiveCfg = Release|x64
+		{2376236D-18C4-4D73-823B-7583F88BC1C2}.Release|x64.Build.0 = Release|x64
+		{2376236D-18C4-4D73-823B-7583F88BC1C2}.Release|x86.ActiveCfg = Release|Win32
+		{2376236D-18C4-4D73-823B-7583F88BC1C2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -861,6 +871,7 @@ Global
 		{CBACABFA-657A-4AEA-AD5F-F591C115568C} = {D5ED2D52-11EA-42FB-A22B-77CF6D112BAF}
 		{3B15CA38-8140-4E18-A6CF-3F13B0848A86} = {D5ED2D52-11EA-42FB-A22B-77CF6D112BAF}
 		{8C8FED15-30F4-453A-98A2-A3BE8AE9C289} = {D5ED2D52-11EA-42FB-A22B-77CF6D112BAF}
+		{2376236D-18C4-4D73-823B-7583F88BC1C2} = {D5ED2D52-11EA-42FB-A22B-77CF6D112BAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7B1B076-15A2-492E-B1F3-E083958BDED4}
