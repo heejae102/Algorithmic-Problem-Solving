@@ -12,6 +12,8 @@ R개의 원소를 뽑아 부분집합을 만드는 경우의 수를 의미한다.
 공식은 nCr 로 표현된다.
 N과 R이 주어지면 이항계수를 구하는 프로그램을 작성하세요.
 
+nCr = (n-1)C(r-1) + (n-1)Cr
+
 =============================================================================
 
 ▶ 입력설명
@@ -30,63 +32,34 @@ N과 R이 주어지면 이항계수를 구하는 프로그램을 작성하세요.
 
 */
 
-struct Data
+/*
+int factorial(int n)
 {
-	int money;
-	int when;
+	if (n == 1) return 1; 
+	else return n * factorial(n - 1);
+}
+*/
 
-	Data(int a, int b)
-	{
-		money = a;
-		when = b;
-	}
+int dy[21][21]{ 0 };
 
-	bool operator<(Data &b)
-	{
-		// 내림차순 정렬 
-		return when > b.when;
-	}
-};
+int DFS(int n, int r)
+{
+	// Memoization(메모이제이션) 
+	// 이미 계산된 값은(0보다 큰 경우) 중복으로 계산하지 않고 저장된 값을 리턴 
+	if (dy[n][r] > 0) return dy[n][r];
+
+	if (n == r || r == 0) return 1; 
+	else return  dy[n][r] = DFS(n - 1, r - 1) + DFS(n - 1, r);	// 계산된 값을 dy에 넣고 리턴 
+}
 
 int main()
 {
 	// 강의 풀이 
 
-	int n, j, a, b, res = 0, max = numeric_limits<int>::min();
+	int n, r;
 
-	vector<Data> T;
-	priority_queue<int> pQ;
-
-	cin >> n;
-
-	for (int i = 0; i < n; i++)
-	{
-		cin >> a >> b;
-		T.push_back(Data(a, b));
-
-		if (b > max) max = b;
-	}
-
-	sort(T.begin(), T.end());
-
-	j = 0;
-
-	for (int i = max; i >= 1; i--)
-	{
-		for (; j < n; j++)
-		{
-			if (T[j].when < i) break;
-			pQ.push(T[j].money);
-		}
-
-		if (!pQ.empty())
-		{
-			res += pQ.top();
-			pQ.pop();
-		}
-	}
-
-	cout << res << endl;
+	cin >> n >> r;
+	cout << DFS(n, r) << endl;
 
 	return 0;
 }

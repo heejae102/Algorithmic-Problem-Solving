@@ -10,7 +10,7 @@ using namespace std;
 오늘은 새 학기 새로운 반에서 처음 시작하는 날이다. 
 현수네 반 학생은 N명이다. 현수는 각 학생들의 친구관계를 알고 싶다.
 모든 학생은 1부터 N까지 번호가 부여되어 있고, 
-현수에게는 각각 두 명의 학생은 친구 관계가 번호로 표현된 숫자쌍이 주어진다. 
+현수에게는 각각 두 학생의 친구 관계가 번호로 표현된 숫자쌍이 주어진다. 
 
 만약 (1, 2), (2, 3), (3, 4)의 숫자쌍이 주어지면 1번 학생과 2번 학생이 친구이고, 
 2번 학생과 3번 학생이 친구, 3번 학생과 4번 학생이 친구이다.
@@ -18,7 +18,7 @@ using namespace std;
 
 학생의 친구관계를 나타내는 숫자쌍이 주어지면 
 특정 두 명이 친구인지를 판별하는 프로그램을 작성하세요. 
-두 학생이 친구이면 “YES"이고, 아니면 ”NO"를 출력한다.
+두 학생이 친구이면 "YES"이고, 아니면 "NO"를 출력한다.
 
 =============================================================================
 
@@ -48,63 +48,9 @@ NO
 
 */
 
-struct Data
-{
-	int money;
-	int when;
-
-	Data(int a, int b)
-	{
-		money = a;
-		when = b;
-	}
-
-	bool operator<(Data &b)
-	{
-		// 내림차순 정렬 
-		return when > b.when;
-	}
-};
-
 int main()
 {
 	// 강의 풀이 
-
-	int n, j, a, b, res = 0, max = numeric_limits<int>::min();
-
-	vector<Data> T;
-	priority_queue<int> pQ;
-
-	cin >> n;
-
-	for (int i = 0; i < n; i++)
-	{
-		cin >> a >> b;
-		T.push_back(Data(a, b));
-
-		if (b > max) max = b;
-	}
-
-	sort(T.begin(), T.end());
-
-	j = 0;
-
-	for (int i = max; i >= 1; i--)
-	{
-		for (; j < n; j++)
-		{
-			if (T[j].when < i) break;
-			pQ.push(T[j].money);
-		}
-
-		if (!pQ.empty())
-		{
-			res += pQ.top();
-			pQ.pop();
-		}
-	}
-
-	cout << res << endl;
 
 	return 0;
 }
